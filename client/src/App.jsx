@@ -1,11 +1,22 @@
+import { useEffect } from "react";
+import Navbar from "./components/Navbar";
+import NewsCard from "./components/NewsCard";
 import "./styles/index.scss";
 
 function App() {
+
+  useEffect(()=>{
+    console.info("inside the useeffect")
+  }, []);
   
   return (
+    <>
+    < Navbar/>
     <div>
-      <button type="button" class="btn btn-primary">Primary</button>
+      < NewsCard newsTitle={"test"} newsDescription={"test description"}/>
     </div>
+    
+    </>
   )
 }
 
