@@ -8,6 +8,8 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
+app.use(cors({origin:"*"}))
+
 app.use("/api/v1/" , router);
 
 app.get("/test" , (req,res)=>{
